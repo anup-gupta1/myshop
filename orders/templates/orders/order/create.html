@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% block title %}
+    Checkout
+{% endblock %}
+
+{% block content %}
+    </br></br></br></br></br></br>
+     <div id="subheader">
+        <div class="cart">
+            {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    Your cart:
+                    <a href="{% url "cart:cart_detail" %}" style="color: wheat">
+                        {{ total_items }} item{{ total_items|pluralize }}, ${{ cart.get_total_price }}
+                    </a>
+                {% else %}
+                    Your cart is empty.
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+    <h1 style="color:green; margin-left: 30%">Checkout</h1>
+       <div class="order-info">
+         <h2>Your order</h2>
+          <ul>
+            {% for item in cart %}
+                <li style="font-size: 18px;">{{ item.quantity }}x {{ item.product.name }}
+                    <i class="fa fa-inr" style="font-size:20px;color:blue"></i><span> {{ item.total_price }}</span>
+                </li>
+            {% endfor %}
+           </ul>
+        <p style="text-align: center;">Total: <i class="fa fa-inr" style="font-size:20px;color:blue"></i>{{ cart.get_total_price }}</p>
+    </div>
+      <div class="container">
+      <div class="jumbotron">
+    <form action="." method="post" class="order-form">
+        <!---{ { form.as_p } }-->
+         {% bootstrap_form form %}
+        <p><input type="submit" value="Place order"></p>
+        {% csrf_token %}
+    </form>
+      </div>
+     </div>
+{% endblock %}

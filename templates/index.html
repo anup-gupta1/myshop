@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="container-fluid" style="height: 640px">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/Bangalore-1600-X-460-17Oct17.jpg" style="height: 640px" href="">
+                 <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                     <p>LA is always so much fun!</p>
+                </div>
+        </div>
+        {% for c in categories %}
+            <div class="item ">
+             {% if category.slug == c.slug %}class="selected"{% endif %}>
+                <a  href="{{ c.get_absolute_url }}">
+                    <img src="{{ c.image.url }}" style="height: 640px">
+                </a>
+                 <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                     <p>LA is always so much fun!</p>
+                </div>
+             </div>
+        {% endfor %}
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+    <br/><br/>
+    <div style="background: rebeccapurple" class="container-fluid">
+        <h3>Categories</h3>
+        <ul class="cat_list">
+            <li {% if not category %}class="selected"{% endif %}>
+                <a href="{% url "shop:product_list" %}">All</a>
+            </li>
+        {% for c in categories %}
+            <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+       </div>
+    <h1>Welcome to Star Social!</h1>
+    <h2>The best community for all things on outer space!</h2>
+    <h2>Login or Sign-up for free to get started!</h2>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}

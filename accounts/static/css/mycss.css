@@ -1,0 +1,364 @@
+body{
+   /* background: url(http://sustainableconvos.com/wp-content/uploads/2017/01/a757a1b22c54196bf30293616961d993.jpg);
+*/
+    background: white;
+}
+
+.navbar-fixed-top{
+    height: 140px;
+    background: white;
+}
+
+h3{
+    color: #1bae37;
+    text-align: center;
+}
+h4{
+    color: red;
+    background-color: yellow;
+}
+.user1{
+    margin-top: 20px;
+    color : white;
+    font-size: medium;
+}
+ul li{
+    display: inline;
+}
+li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav div div ul li a{
+    margin-top: 15px;
+    margin-left: 80px;
+    font-size: 25px;
+    font-family: "Times New Roman";
+    color: #000c0a;
+}
+.btn-primary{
+    margin-left: 100px;
+}
+hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+div div div ul li a{
+    color: #000c0a;
+    font-size: 20px;
+    font-family: "Times New Roman";
+
+}
+/*.container{ *?
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: lime; /* Just to visualize the extent */
+
+/*} */
+
+
+
+.bottom-right {
+    position: absolute;
+    bottom: 45px;
+    right: 80px;
+    color: #1bae37;
+    font-size: medium;
+}
+
+.jumbotron{
+    background: rgba(218, 232, 218,0.2)!important;
+    width: 60%;
+    margin-left: 12%;
+}
+.container1{
+    background-color: #111111;
+}
+
+#list{
+    background: none;
+}
+.container2{
+    margin-right: 40px;
+     float: right;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 30%;
+    height: 240px;
+    background-color:#ccf6fc ;
+}
+.container3{
+    float: right;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 25%;
+    height: 240px;
+    background-color:#cafcb3 ;
+}
+.class-sm-4 item:hover{
+    opacity: 0.5;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+#background_pic{
+    margin-left: 30px;
+}
+ .text-right{
+     font-size: 20px;
+ }
+
+
+
+
+
+
+
+
+
+
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse;
+    margin:20px 0;
+}
+
+table th, table td {
+    text-align:left;
+    font-size:15px;
+    padding:10px;
+    margin:0;
+}
+
+tbody tr:nth-child(odd) {
+    background:#efefef;
+}
+
+thead th, tbody tr.total {
+    background:#5993bb;
+    color:#fff;
+    font-weight:bold;
+}
+
+h1 {
+    margin-bottom:0px;
+    background: white;
+}
+
+
+.secondary {
+    color:#bbb;
+    margin-bottom:20px;
+}
+
+.num {
+    text-align:right;
+}
+
+.paid, .pending {
+    color:#1bae37;
+    border:4px solid #1bae37;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:22px;
+    padding:12px;
+    float:right;
+    transform: rotate(-15deg);
+    margin-right:40px;
+}
+
+.pending {
+    color:#a82d2d;
+    border:4px solid #a82d2d;
+}
+
+#subheader {
+    background:#5a438c;
+    color:white;
+    height: 80px;
+    padding:15px 100px;
+    overflow:auto;
+}
+
+#subheader .cart {
+    float:right;
+    font-size: 20px;
+    padding-top:20px;
+}
+
+
+
+
+
+
+.order-info {
+    float:right;
+    border: solid thick green;
+    margin-right: 20%;
+    font-size: 20px;
+    width:300px;
+    background:white;
+    padding:10px 20px;
+    color:#772e7a;
+    border-bottom:4px solid #5993bb;
+}
+
+.order-info h3 {
+    color:#5993bb;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+    background: white;
+    width: auto;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+    background: white;
+}
+
+.order-info span {
+    float:right;
+    background: white;
+}
+
+
+.container5{
+    background: white;
+    color: blue;
+}
+
+
+
+
+
+
+
+#myFooter {
+	background-color: #a6e043;
+	color:white;
+}
+
+#myFooter .footer-copyright{
+	background-color: #383737;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align: center;
+}
+
+#myFooter .footer-copyright p{
+	margin:10px;
+	color: #ccc;
+}
+
+#myFooter ul{
+
+    padding-left: 0;
+
+
+}
+
+#myFooter h5{
+	font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a{
+	color:white;
+	text-decoration: none;
+}
+
+#myFooter a:hover, #myFooter a:focus{
+	text-decoration: none;
+	color:white;
+}
+
+#myFooter .myCols{
+	text-align: center;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 38px;
+}
+
+#myFooter .social-networks a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover{
+	text-decoration: none;
+
+}
+
+#myFooter .facebook:hover{
+	color:#0077e2;
+}
+
+#myFooter .google:hover{
+	color:#ef1a1a;
+}
+
+#myFooter .twitter:hover{
+	color: #00aced;
+}
+
+@media screen and (max-width: 767px){
+	#myFooter {
+		text-align: center;
+	}
+}
+
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+
+
+.content{
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	min-height: 200px;
+}
+
+#myFooter{
+	flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}

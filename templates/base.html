@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indian Market</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/mycss.css'%}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed-top">
+     <div class="container-fluid">
+     <div style="height:50px;background: #a6e043; text-align: center; font-size: 20px; color:white">Guaranteed lowest price or your money back !</div>
+      <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="{% url 'accounts:profile' %}">IndiaMarket</a>
+       </div>
+       <div id="navbarCollapse" class="collapse navbar-collapse">
+             {% if user.is_authenticated %}
+                 <ul class="nav navbar-nav">
+                  <li><a href="{% url 'shop:product_list' %}">Shop</a></li>
+                  <li><a href="{% url 'shop:store' %}">Stores</a></li>
+                 </ul>
+                 <ul class="nav navbar-nav  navbar-right">
+                    <li class="navbar-link" style="color:green; font-size: 20px;padding-top: 30px; ">
+                         <span class="glyphicon glyphicon-user"></span> {{ user.username }}
+                    </li>
+                    <li><a class="navbar-link" href="{% url 'accounts:logout' %}">
+                      Logout</a>
+                    </li>
+                    <li> <a class="navbar-link" href="{% url 'cart:cart_detail' %}">
+                     <span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
+                    </li>
+                 </ul>
+             {% else %}
+                 <ul class="nav navbar-nav">
+                     <li><a href="#">News</a></li>
+                     <li><a href="#">Top Stores</a></li>
+                     <li><a href="#">Offers</a></li>
+                     <li><a href="#">Upcoming Deal</a></li>
+                 </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbar-link" href="{% url 'accounts:login' %}">
+                     <span class="glyphicon glyphicon-log-in"></span>  Login</a> </li>
+                    <li><a class="navbar-link" href="{% url 'accounts:signup' %}">
+                     <span class="glyphicon glyphicon-user"></span>Signup</a>
+                    </li>
+                  </ul>
+            {% endif %}
+       </div>
+     </div>
+    <hr>
+ </nav>
+
+
+
+
+          {% block content %}
+
+          {% endblock %}
+
+
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 myCols">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 myCols">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 myCols">
+                    <h5>Legal</h5>
+                    <br>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <hr style="width: 80%; color: black;">
+        <div class="social-networks">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2017 Copyright Text </p>
+        </div>
+    </footer>
+
+
+
+
+  </body>
+</html>
